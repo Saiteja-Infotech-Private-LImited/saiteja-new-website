@@ -6,7 +6,7 @@ import {
   Mail,
   Phone,
   Layers,
-  DollarSign,
+  IndianRupee,
   Clock3,
   MessageSquare,
   Send,
@@ -1210,9 +1210,7 @@ function Quotation() {
             <div className="form-field">
 
               <label htmlFor="budget">
-
-                <DollarSign size={15} />
-
+                <IndianRupee size={15} />
                 Budget Range
 
                 <span className="required">
@@ -1235,27 +1233,11 @@ function Quotation() {
                 >
                   Select budget range
                 </option>
-
-                <option value="under-1k">
-                  Under ₹1,000
-                </option>
-
-                <option value="1k-5k">
-                  ₹1,000 – ₹5,000
-                </option>
-
-                <option value="5k-10k">
-                  ₹5,000 – ₹10,000
-                </option>
-
-                <option value="10k-25k">
-                  ₹10,000 – ₹25,000
-                </option>
-
-                <option value="25k-plus">
-                  ₹25,000+
-                </option>
-
+                <option value="under-1k">Under ₹1,000</option>
+                <option value="1k-5k">₹1,000 – ₹5,000</option>
+                <option value="5k-10k">₹5,000 – ₹10,000</option>
+                <option value="10k-25k">₹10,000 – ₹25,000</option>
+                <option value="25k-plus">₹25,000+</option>
               </select>
 
             </div>
