@@ -79,7 +79,7 @@ function Contact() {
       {/* CONTACT CONTENT */}
       <section className="contact-main">
         <div className="contact-information">
-          <div className="section-label">GET IN TOUCH</div>
+          <div className="section-label">CONTACT</div>
 
           <h2>
             Tell us what

@@ -48,7 +48,23 @@ function Services() {
 
                 <p>{description}</p>
 
-                <Link to="/contact">
+                <Link
+                  to={
+                    title === "HR & Staffing"
+                      ? "/services/hr-staffing"
+                      : title === "IT Solutions"
+                      ? "/services/it-solutions"
+                      : title === "AI & Data Solutions"
+                      ? "/services/ai-data-solutions"
+                      : title === "Branding & Digital"
+                      ? "/services/branding-digital"
+                      : title === "Training & Development"
+                      ? "/services/training-development"
+                      : title === "Recruitment"
+                      ? "/services/recruitment"
+                      : "/contact"
+                  }
+                >
                   Learn more
                   <ArrowRight size={16} />
                 </Link>
