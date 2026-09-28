@@ -7,7 +7,7 @@ import {
   BriefcaseBusiness,
 } from "lucide-react";
 
-import hrStaffingImage from "../assets/services/hr-staffing.png";
+import hrStaffingImage from "../assets/services/hr-staffing.jpg";
 import itSolutionsImage from "../assets/services/it-solutions.png";
 import aiDataImage from "../assets/services/ai-data-solutions.png";
 import brandingDigitalImage from "../assets/services/branding-digital.png";

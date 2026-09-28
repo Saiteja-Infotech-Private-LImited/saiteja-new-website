@@ -91,16 +91,6 @@ function Footer() {
             <Mail size={16} />
             {CONTACT_DETAILS.email}
           </a>
-
-          <a
-            className="footer-contact-link"
-            href={CONTACT_DETAILS.whatsapp}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <MessageCircle size={16} />
-            Chat with us on WhatsApp
-          </a>
         </div>
 
         {/* LINKS */}

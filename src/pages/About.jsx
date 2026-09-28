@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Button from "../components/Button";
 import SectionHeading from "../components/SectionHeading";
-import profileImage from "../assets/services/hr-staffing.png";
+import profileImage from "../assets/services/hr-staffing.jpg";
 
 const milestones = [
   {
