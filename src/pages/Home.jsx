@@ -6,6 +6,8 @@ import { CONTACT_DETAILS } from "../data/contact";
 
 import SectionHeading from "../components/SectionHeading";
 import services from "../data/services";
+import introImage from "../assets/services/it-solutions.png";
+import careersImage from "../assets/services/recruitment.png";
 
 function Home() {
   return (
@@ -73,23 +75,18 @@ function Home() {
       <section className="stats-strip">
         <div className="stats-strip-inner">
           <div className="stat-item">
-            <strong>10+</strong>
+            <strong>2+</strong>
             <span>Years of Experience</span>
           </div>
 
           <div className="stat-item">
-            <strong>150+</strong>
+            <strong>20+</strong>
             <span>Projects Delivered</span>
           </div>
 
           <div className="stat-item">
-            <strong>50+</strong>
-            <span>Enterprise Clients</span>
-          </div>
-
-          <div className="stat-item">
-            <strong>24/7</strong>
-            <span>Support & Delivery</span>
+            <strong>10+</strong>
+            <span>Happy Clients</span>
           </div>
         </div>
       </section>
@@ -118,6 +115,10 @@ function Home() {
             </Link>
           </div>
         </div>
+
+        <figure className="section-photo">
+          <img src={introImage} alt="Technology solutions by Saiteja Infotech" loading="lazy" />
+        </figure>
       </section>
 
       {/* SERVICES */}
@@ -179,7 +180,7 @@ function Home() {
       </section>
 
       {/* CAREERS PREVIEW */}
-      <section className="careers-section" id="careers">
+      <section className="careers-section careers-with-photo" id="careers">
         <div className="careers-content">
           <div className="section-label">JOIN THE JOURNEY</div>
 
@@ -197,6 +198,10 @@ function Home() {
             Explore Careers <ArrowRight size={18} />
           </Link>
         </div>
+
+        <figure className="careers-photo">
+          <img src={careersImage} alt="Careers at Saiteja Infotech" loading="lazy" />
+        </figure>
       </section>
 
       {/* CONTACT CTA */}

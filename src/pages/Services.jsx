@@ -1,4 +1,4 @@
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 
 import Button from "../components/Button";
@@ -35,7 +35,7 @@ function Services() {
         </div>
 
         <div className="services-detail-grid">
-          {services.map(({ image, number, title, description }) => (
+          {services.map(({ image, number, title, description, highlights }) => (
             <article className="service-detail-card" key={title}>
               <div className="service-detail-image">
                 <img src={image} alt={title} />
@@ -47,6 +47,15 @@ function Services() {
                 <h3>{title}</h3>
 
                 <p>{description}</p>
+
+                <ul className="service-highlights">
+                  {highlights.map((item) => (
+                    <li key={item}>
+                      <CheckCircle2 size={16} />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
 
                 <Link
                   to={

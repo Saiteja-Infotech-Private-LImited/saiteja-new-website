@@ -1,206 +1,233 @@
-function HRStaffing() {
-  return (
-    <>
-      <main className="services-page">
+import { ArrowRight, Sparkles } from "lucide-react";
+import { Link } from "react-router-dom";
 
-        <section className="services-hero">
-          <div className="section-label">HR & STAFFING</div>
+import companyLogo from "../assets/logo.png";
+import { CONTACT_DETAILS } from "../data/contact";
+
+import SectionHeading from "../components/SectionHeading";
+import services from "../data/services";
+import introImage from "../assets/services/it-solutions.png";
+import careersImage from "../assets/services/recruitment.png";
+
+function Home() {
+  return (
+    <main>
+      {/* HERO */}
+      <section className="hero-section" id="home">
+        <div className="hero-content">
+          <div className="eyebrow">
+            <Sparkles size={15} />
+            Technology • Talent • Transformation
+          </div>
 
           <h1>
-            Building teams
-            <span> that move businesses forward.</span>
+            Building what's next
+            <span> for ambitious businesses.</span>
           </h1>
 
           <p>
-            Flexible workforce solutions that connect organizations with the
-            right people and capabilities.
+            SAITEJA INFOTECH PRIVATE LIMITED delivers technology, staffing, and
+            digital solutions that help organizations move forward with
+            confidence.
           </p>
-        </section>
 
-        <section className="services-list-section">
-          <div className="services-intro">
+          <div className="hero-actions">
+            <a className="primary-button" href="#services">
+              Explore Services <ArrowRight size={18} />
+            </a>
 
-            <div className="section-label">
-              HR & STAFFING SOLUTIONS
-            </div>
+            <Link className="secondary-button" to="/contact">
+              Start a Conversation
+            </Link>
+          </div>
+        </div>
 
-            <h2>
-              The right people.
-              <span> The right capabilities.</span>
-            </h2>
+        <div className="hero-visual" aria-hidden="true">
+          <div className="hero-logo-container">
+            <img src={companyLogo} alt="" className="hero-company-logo" />
+          </div>
+        </div>
+      </section>
 
+      {/* FEATURED SERVICES ROW — overlaps the hero, image-led cards */}
+      <section className="featured-row-section">
+        <div className="featured-row">
+          {services.slice(0, 3).map(({ image, title, description }) => (
+            <article className="featured-card" key={title}>
+              <div className="featured-card-image">
+                <img src={image} alt={title} />
+              </div>
+
+              <div className="featured-card-body">
+                <h3>{title}</h3>
+                <p>{description}</p>
+
+                <Link to="/services" aria-label={`Learn more about ${title}`}>
+                  Learn more <ArrowRight size={15} />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* STATS STRIP */}
+      <section className="stats-strip">
+        <div className="stats-strip-inner">
+          <div className="stat-item">
+            <strong>2+</strong>
+            <span>Years of Experience</span>
+          </div>
+
+          <div className="stat-item">
+            <strong>20+</strong>
+            <span>Projects Delivered</span>
+          </div>
+
+          <div className="stat-item">
+            <strong>10+</strong>
+            <span>Happy Clients</span>
+          </div>
+        </div>
+      </section>
+
+      {/* ABOUT PREVIEW */}
+      <section className="intro-section" id="about">
+        <div className="section-label">WHO WE ARE</div>
+
+        <div className="intro-grid">
+          <h2>
+            One partner.
+            <br />
+            <span>Multiple possibilities.</span>
+          </h2>
+
+          <div>
             <p>
-              We help organizations build capable teams through flexible
-              workforce and staffing solutions aligned with their business
-              requirements.
+              We combine technology, talent and business understanding to create
+              solutions that are practical, scalable and built for real-world
+              impact.
             </p>
 
+            <Link className="text-link" to="/about">
+              Discover SAITEJA INFOTECH PRIVATE LIMITED{" "}
+              <ArrowRight size={17} />
+            </Link>
           </div>
-        </section>
+        </div>
 
-        <section className="hr-details-section">
-          <div className="hr-details-container">
+        <figure className="section-photo">
+          <img src={introImage} alt="Technology solutions by Saiteja Infotech" loading="lazy" />
+        </figure>
+      </section>
 
-            {/* Workforce Management */}
-            <div className="hr-detail-content">
-              <h3>Workforce Management</h3>
+      {/* SERVICES */}
+      <section className="services-section" id="services">
+        <SectionHeading
+          label="WHAT WE DO"
+          title="Solutions built around"
+          highlight=" your goals."
+          description="From people and processes to technology and security, our capabilities are designed to work together."
+        />
 
-              <p>
-                Effective workforce management helps organizations align their
-                people, skills, and business requirements. We support businesses
-                in managing workforce needs efficiently while creating a
-                structured approach to their people and operations.
-              </p>
-            </div>
+        <div className="services-grid">
+          {services.map(({ image, number, title, description }) => (
+            <article className="service-card" key={title}>
+              <div className="service-image">
+                <img src={image} alt={title} />
 
+                <span className="service-image-number">{number}</span>
+              </div>
 
-            {/* Employee Engagement & Support */}
-            <div className="hr-detail-content">
-              <h3>Employee Engagement & Support</h3>
+              <div className="service-card-content">
+                <h3>{title}</h3>
 
-              <p>
-                A positive employee experience contributes to a productive and
-                collaborative workplace. Our HR solutions support organizations
-                in strengthening employee engagement, communication, workplace
-                relationships, and overall employee support.
-              </p>
-            </div>
+                <p>{description}</p>
 
+                <Link to="/services" aria-label={`Learn more about ${title}`}>
+                  Learn more <ArrowRight size={16} />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
 
-            {/* Performance & Development */}
-            <div className="hr-detail-content">
-              <h3>Performance & Development</h3>
+      {/* VISION / APPROACH */}
+      <section className="vision-section">
+        <div className="vision-box">
+          <div>
+            <div className="section-label">OUR APPROACH</div>
 
-              <p>
-                We help organizations support employee performance through
-                clear objectives, continuous feedback, professional development,
-                and opportunities to strengthen skills and capabilities.
-              </p>
-            </div>
-
-
-            {/* HR Operations */}
-            <div className="hr-detail-content">
-              <h3>HR Operations</h3>
-
-              <p>
-                Our HR operations support helps organizations maintain
-                structured and efficient people processes. From employee-related
-                administration to workforce coordination, we help businesses
-                manage their HR activities effectively.
-              </p>
-            </div>
-
-
-            {/* Organizational Growth */}
-            <div className="hr-detail-content">
-              <h3>Supporting Organizational Growth</h3>
-
-              <p>
-                Strong people practices play an important role in helping
-                organizations achieve their business objectives. By combining
-                flexible workforce solutions with structured HR practices, we
-                help businesses develop their workforce, improve employee
-                experiences, and build capabilities that support long-term
-                growth.
-              </p>
-            </div>
-
+            <h2>
+              Technology should
+              <span> create momentum.</span>
+            </h2>
           </div>
-        </section>
 
-      </main>
+          <p>
+            We believe the best solutions are not simply impressive — they solve
+            problems, empower people and create measurable progress for the
+            organizations behind them.
+          </p>
 
-      <style>{`
+          <div className="vision-tags">
+            {services.slice(0, 3).map(({ title }) => (
+              <span key={title}>{title}</span>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        /* HR & STAFFING DETAILS */
+      {/* CAREERS PREVIEW */}
+      <section className="careers-section careers-with-photo" id="careers">
+        <div className="careers-content">
+          <div className="section-label">JOIN THE JOURNEY</div>
 
-        .hr-details-section {
-          width: 100%;
-          background: #f7f8fc;
-          padding: 30px 40px 110px;
-        }
+          <h2>
+            Your next opportunity
+            <span> could start here.</span>
+          </h2>
 
-        .hr-details-container {
-          max-width: 1200px;
-          margin: 0 auto;
-        }
+          <p>
+            Work with people who are building technology, solving problems and
+            shaping what comes next.
+          </p>
 
-        .hr-detail-content {
-          max-width: 1000px;
-          margin: 0 auto 55px;
-        }
+          <Link className="primary-button" to="/careers">
+            Explore Careers <ArrowRight size={18} />
+          </Link>
+        </div>
 
-        .hr-detail-content:last-child {
-          margin-bottom: 0;
-        }
+        <figure className="careers-photo">
+          <img src={careersImage} alt="Careers at Saiteja Infotech" loading="lazy" />
+        </figure>
+      </section>
 
-        .hr-detail-content h3 {
-          font-size: 28px;
-          line-height: 1.3;
-          font-weight: 600;
-          color: #111827;
-          margin: 0 0 16px;
-        }
+      {/* CONTACT CTA */}
+      <section className="contact-section" id="contact">
+        <div className="contact-card">
+          <div>
+            <div className="section-label">LET'S CONNECT</div>
 
-        .hr-detail-content p {
-          font-size: 17px;
-          line-height: 1.8;
-          color: #53627a;
-          margin: 0;
-        }
+            <h2>Have a challenge?</h2>
 
+            <p>
+              Let's talk about how SAITEJA INFOTECH PRIVATE LIMITED can help
+              turn your next idea into something real.
+            </p>
+          </div>
 
-        /* TABLET */
-
-        @media (max-width: 900px) {
-
-          .hr-details-section {
-            padding: 25px 30px 90px;
-          }
-
-          .hr-detail-content {
-            max-width: 850px;
-          }
-
-          .hr-detail-content h3 {
-            font-size: 26px;
-          }
-
-          .hr-detail-content p {
-            font-size: 16px;
-          }
-
-        }
-
-
-        /* MOBILE */
-
-        @media (max-width: 600px) {
-
-          .hr-details-section {
-            padding: 20px 20px 70px;
-          }
-
-          .hr-detail-content {
-            margin-bottom: 40px;
-          }
-
-          .hr-detail-content h3 {
-            font-size: 23px;
-            line-height: 1.35;
-          }
-
-          .hr-detail-content p {
-            font-size: 16px;
-            line-height: 1.7;
-          }
-
-        }
-
-      `}</style>
-    </>
+          <a
+            className="primary-button"
+            href={`mailto:${CONTACT_DETAILS.email}`}
+          >
+            Contact Us <ArrowRight size={18} />
+          </a>
+        </div>
+      </section>
+    </main>
   );
 }
 
-export default HRStaffing;
+export default Home;

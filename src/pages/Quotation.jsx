@@ -1170,12 +1170,8 @@ function Quotation() {
                 Select project type
               </option>
 
-              <option value="web-development">
-                Web Development
-              </option>
-
-              <option value="software-development">
-                Software Development
+              <option value="hr-staffing">
+                HR & Staffing
               </option>
 
               <option value="it-solutions">
@@ -1186,8 +1182,16 @@ function Quotation() {
                 AI & Data Solutions
               </option>
 
-              <option value="digital-services">
-                Digital Services
+              <option value="branding-digital">
+                Branding & Digital
+              </option>
+
+              <option value="training-development">
+                Training & Development
+              </option>
+
+              <option value="recruitment">
+                Recruitment
               </option>
 
               <option value="other">

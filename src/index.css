@@ -641,7 +641,7 @@ h4 {
   margin: 0 auto;
 
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
 
@@ -3941,4 +3941,177 @@ h4 {
 .footer-address span {
   line-height: 1.6;
   overflow-wrap: anywhere;
+}
+
+/* =====================================================
+   SERVICES - CLEAR HIGHLIGHTS + DETAIL PAGE IMAGE
+===================================================== */
+
+.service-highlights {
+  list-style: none;
+
+  display: grid;
+  gap: 9px;
+
+  margin: 4px 0 6px;
+  padding: 16px 0 0;
+
+  border-top: 1px dashed var(--border);
+}
+
+.service-highlights li {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: var(--text);
+
+  font-size: 13.5px;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.service-highlights svg {
+  flex-shrink: 0;
+
+  color: var(--orange);
+}
+
+.service-detail-card p {
+  min-height: 0;
+
+  margin-bottom: 14px;
+}
+
+.service-detail-card {
+  display: flex;
+  flex-direction: column;
+
+  overflow: hidden;
+}
+
+.service-detail-content {
+  display: flex;
+  flex-direction: column;
+
+  flex: 1;
+}
+
+.service-detail-content h3 {
+  margin: 8px 0 10px;
+}
+
+.service-detail-content > a {
+  margin-top: auto;
+  padding-top: 14px;
+}
+
+.service-page-image {
+  margin: -50px 8% 0;
+
+  position: relative;
+  z-index: 3;
+
+  max-height: 380px;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.service-page-image img {
+  width: 100%;
+  height: 380px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+@media (max-width: 650px) {
+  .service-page-image {
+    margin: -30px 6% 0;
+  }
+
+  .service-page-image img {
+    height: 220px;
+  }
+}
+
+
+.career-culture-visual {
+  padding: 0;
+
+  overflow: hidden;
+}
+
+.career-culture-visual img {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+
+/* =====================================================
+   SECTION PHOTOS (Home + About)
+===================================================== */
+
+.section-photo {
+  margin-top: 60px;
+
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.section-photo img {
+  width: 100%;
+  height: 360px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+.careers-with-photo {
+  display: grid;
+  grid-template-columns: 1fr 0.8fr;
+  align-items: center;
+  gap: 8%;
+}
+
+.careers-photo {
+  overflow: hidden;
+
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.careers-photo img {
+  width: 100%;
+  height: 340px;
+
+  display: block;
+
+  object-fit: cover;
+}
+
+@media (max-width: 1100px) {
+  .careers-with-photo {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 650px) {
+  .section-photo img,
+  .careers-photo img {
+    height: 220px;
+  }
 }

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Button from "../components/Button";
 import SectionHeading from "../components/SectionHeading";
+import profileImage from "../assets/services/hr-staffing.png";
 
 const milestones = [
   {
@@ -104,6 +105,10 @@ function About() {
             </p>
           </div>
         </div>
+
+        <figure className="section-photo">
+          <img src={profileImage} alt="People and technology at Saiteja Infotech" loading="lazy" />
+        </figure>
       </section>
 
       {/* LEADERSHIP */}
