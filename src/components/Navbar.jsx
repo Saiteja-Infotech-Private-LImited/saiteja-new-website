@@ -1,5 +1,5 @@
 import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
 import companyLogo from "../assets/logo.png";
@@ -16,11 +16,21 @@ const NAV_LINKS = [
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const closeMenu = () => setIsOpen(false);
 
+  useEffect(() => {
+    const onScroll = () => setIsScrolled(window.scrollY > 24);
+
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="site-header">
+    <header className={`site-header ${isScrolled ? "is-scrolled" : ""}`}>
       <Link
         className="brand"
         to="/"

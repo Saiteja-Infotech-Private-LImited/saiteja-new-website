@@ -12,9 +12,6 @@ function Home() {
     <main>
       {/* HERO */}
       <section className="hero-section" id="home">
-        <div className="hero-glow hero-glow-one" />
-        <div className="hero-glow hero-glow-two" />
-
         <div className="hero-content">
           <div className="eyebrow">
             <Sparkles size={15} />
@@ -22,7 +19,7 @@ function Home() {
           </div>
 
           <h1>
-            Building what’s next
+            Building what's next
             <span> for ambitious businesses.</span>
           </h1>
 
@@ -41,38 +38,58 @@ function Home() {
               Start a Conversation
             </Link>
           </div>
-
-          <div className="hero-trust">
-            <span>01</span>
-            <p>Technology-driven solutions</p>
-
-            <span>02</span>
-            <p>People-focused execution</p>
-          </div>
         </div>
 
         <div className="hero-visual" aria-hidden="true">
           <div className="hero-logo-container">
-            <img
-              src={companyLogo}
-              alt=""
-              className="hero-company-logo"
-            />
+            <img src={companyLogo} alt="" className="hero-company-logo" />
+          </div>
+        </div>
+      </section>
+
+      {/* FEATURED SERVICES ROW — overlaps the hero, image-led cards */}
+      <section className="featured-row-section">
+        <div className="featured-row">
+          {services.slice(0, 3).map(({ image, title, description }) => (
+            <article className="featured-card" key={title}>
+              <div className="featured-card-image">
+                <img src={image} alt={title} />
+              </div>
+
+              <div className="featured-card-body">
+                <h3>{title}</h3>
+                <p>{description}</p>
+
+                <Link to="/services" aria-label={`Learn more about ${title}`}>
+                  Learn more <ArrowRight size={15} />
+                </Link>
+              </div>
+            </article>
+          ))}
+        </div>
+      </section>
+
+      {/* STATS STRIP */}
+      <section className="stats-strip">
+        <div className="stats-strip-inner">
+          <div className="stat-item">
+            <strong>10+</strong>
+            <span>Years of Experience</span>
           </div>
 
-          <div className="floating-card card-top">
-            <span className="status-dot" />
-            Digital innovation
+          <div className="stat-item">
+            <strong>150+</strong>
+            <span>Projects Delivered</span>
           </div>
 
-          <div className="floating-card card-bottom">
-            <strong>∞</strong>
+          <div className="stat-item">
+            <strong>50+</strong>
+            <span>Enterprise Clients</span>
+          </div>
 
-            <span>
-              Possibilities
-              <br />
-              start here.
-            </span>
+          <div className="stat-item">
+            <strong>24/7</strong>
+            <span>Support & Delivery</span>
           </div>
         </div>
       </section>
@@ -113,7 +130,7 @@ function Home() {
         />
 
         <div className="services-grid">
-          {services.slice(0, 4).map(({ image, number, title, description }) => (
+          {services.map(({ image, number, title, description }) => (
             <article className="service-card" key={title}>
               <div className="service-image">
                 <img src={image} alt={title} />
@@ -152,6 +169,12 @@ function Home() {
             problems, empower people and create measurable progress for the
             organizations behind them.
           </p>
+
+          <div className="vision-tags">
+            {services.slice(0, 3).map(({ title }) => (
+              <span key={title}>{title}</span>
+            ))}
+          </div>
         </div>
       </section>
 
