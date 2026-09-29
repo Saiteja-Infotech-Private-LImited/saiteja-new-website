@@ -158,7 +158,7 @@ function Footer() {
 
       <div className="footer-bottom">
         <span>
-          © {new Date().getFullYear()} SAITEJA INFOTECH PRIVATE LIMITED. All
+          © 2025 SAITEJA INFOTECH PRIVATE LIMITED. All
           rights reserved.
         </span>
 
