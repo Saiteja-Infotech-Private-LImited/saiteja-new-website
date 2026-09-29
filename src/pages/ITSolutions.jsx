@@ -1,4 +1,4 @@
-import iTSolutionsImage from "../assets/services/it-solutions.png";
+import iTSolutionsImage from "../assets/services/it-solutions.jpg";
 
 function ITSolutions() {
   return (

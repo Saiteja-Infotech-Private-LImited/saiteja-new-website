@@ -8,8 +8,8 @@ import {
 } from "lucide-react";
 
 import hrStaffingImage from "../assets/services/hr-staffing.jpg";
-import itSolutionsImage from "../assets/services/it-solutions.png";
-import aiDataImage from "../assets/services/ai-data-solutions.png";
+import itSolutionsImage from "../assets/services/it-solutions.jpg";
+import aiDataImage from "../assets/services/ai-data-solutions.jpg";
 import brandingDigitalImage from "../assets/services/branding-digital.png";
 import trainingDevelopmentImage from "../assets/services/training-development.png";
 import recruitmentImage from "../assets/services/recruitment.png";

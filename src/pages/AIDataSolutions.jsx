@@ -1,4 +1,4 @@
-import aIDataSolutionsImage from "../assets/services/ai-data-solutions.png";
+import aIDataSolutionsImage from "../assets/services/ai-data-solutions.jpg";
 
 function AIDataSolutions() {
   return (

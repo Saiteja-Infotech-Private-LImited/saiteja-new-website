@@ -6,7 +6,7 @@ import { CONTACT_DETAILS } from "../data/contact";
 
 import SectionHeading from "../components/SectionHeading";
 import services from "../data/services";
-import introImage from "../assets/services/it-solutions.png";
+import introImage from "../assets/services/it-solutions.jpg";
 import careersImage from "../assets/services/recruitment.png";
 
 function Home() {
