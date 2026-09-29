@@ -1,3 +1,5 @@
+import aIDataSolutionsImage from "../assets/services/ai-data-solutions.jpg";
+
 function AIDataSolutions() {
   return (
     <>
@@ -17,6 +19,11 @@ function AIDataSolutions() {
             information into business value.
           </p>
         </section>
+
+        {/* SERVICE IMAGE */}
+        <figure className="service-page-image">
+          <img src={aIDataSolutionsImage} alt="AI & Data Solutions" loading="lazy" />
+        </figure>
 
 
         {/* INTRODUCTION */}

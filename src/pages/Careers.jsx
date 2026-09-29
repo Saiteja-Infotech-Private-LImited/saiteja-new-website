@@ -1,8 +1,9 @@
-import { ArrowRight, Briefcase, CheckCircle2, Users } from 'lucide-react'
+import { ArrowRight, Briefcase, CheckCircle2 } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
 import Button from '../components/Button'
 import SectionHeading from '../components/SectionHeading'
+import cultureImage from '../assets/services/training-development.png'
 
 const opportunities = [
   {
@@ -93,9 +94,11 @@ function Careers() {
       {/* CULTURE */}
       <section className="career-culture">
         <div className="career-culture-visual">
-          <div className="culture-circle">
-            <Users size={42} />
-          </div>
+          <img
+            src={cultureImage}
+            alt="Learning and growth at Saiteja Infotech"
+            loading="lazy"
+          />
         </div>
 
         <div className="career-culture-content">

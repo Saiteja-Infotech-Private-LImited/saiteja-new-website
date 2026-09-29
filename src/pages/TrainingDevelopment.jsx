@@ -1,3 +1,5 @@
+import trainingDevelopmentImage from "../assets/services/training-development.png";
+
 function TrainingDevelopment() {
   return (
     <>
@@ -17,6 +19,11 @@ function TrainingDevelopment() {
             skills and prepare people for what comes next.
           </p>
         </section>
+
+        {/* SERVICE IMAGE */}
+        <figure className="service-page-image">
+          <img src={trainingDevelopmentImage} alt="Training & Development" loading="lazy" />
+        </figure>
 
 
         {/* INTRODUCTION */}

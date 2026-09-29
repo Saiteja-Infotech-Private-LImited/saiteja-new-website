@@ -1,3 +1,5 @@
+import iTSolutionsImage from "../assets/services/it-solutions.jpg";
+
 function ITSolutions() {
   return (
     <>
@@ -17,6 +19,11 @@ function ITSolutions() {
             processes, productivity and digital capabilities.
           </p>
         </section>
+
+        {/* SERVICE IMAGE */}
+        <figure className="service-page-image">
+          <img src={iTSolutionsImage} alt="IT Solutions" loading="lazy" />
+        </figure>
 
 
         {/* IT SOLUTIONS INTRODUCTION */}

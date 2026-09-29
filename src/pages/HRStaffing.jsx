@@ -1,3 +1,5 @@
+import hRStaffingImage from "../assets/services/hr-staffing.jpg";
+
 function HRStaffing() {
   return (
     <>
@@ -16,6 +18,11 @@ function HRStaffing() {
             right people and capabilities.
           </p>
         </section>
+
+        {/* SERVICE IMAGE */}
+        <figure className="service-page-image">
+          <img src={hRStaffingImage} alt="HR & Staffing" loading="lazy" />
+        </figure>
 
         <section className="services-list-section">
           <div className="services-intro">

@@ -1,3 +1,5 @@
+import recruitmentImage from "../assets/services/recruitment.png";
+
 function Recruitment() {
   return (
     <>
@@ -17,6 +19,11 @@ function Recruitment() {
             aligned with organizational needs.
           </p>
         </section>
+
+        {/* SERVICE IMAGE */}
+        <figure className="service-page-image">
+          <img src={recruitmentImage} alt="Recruitment" loading="lazy" />
+        </figure>
 
 
         {/* INTRODUCTION */}

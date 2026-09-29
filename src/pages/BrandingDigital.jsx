@@ -1,3 +1,5 @@
+import brandingDigitalImage from "../assets/services/branding-digital.png";
+
 function BrandingDigital() {
   return (
     <>
@@ -17,6 +19,11 @@ function BrandingDigital() {
             their identity and reach their audience.
           </p>
         </section>
+
+        {/* SERVICE IMAGE */}
+        <figure className="service-page-image">
+          <img src={brandingDigitalImage} alt="Branding & Digital" loading="lazy" />
+        </figure>
 
 
         {/* INTRODUCTION */}
