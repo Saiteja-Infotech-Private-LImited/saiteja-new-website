@@ -10,9 +10,9 @@ import {
 import hrStaffingImage from "../assets/services/hr-staffing.jpg";
 import itSolutionsImage from "../assets/services/it-solutions.jpg";
 import aiDataImage from "../assets/services/ai-data-solutions.jpg";
-import brandingDigitalImage from "../assets/services/branding-digital.png";
-import trainingDevelopmentImage from "../assets/services/training-development.png";
-import recruitmentImage from "../assets/services/recruitment.png";
+import brandingDigitalImage from "../assets/services/branding-digital.jpg";
+import trainingDevelopmentImage from "../assets/services/training-development.jpg";
+import recruitmentImage from "../assets/services/recruitment.jpg";
 
 const services = [
   {

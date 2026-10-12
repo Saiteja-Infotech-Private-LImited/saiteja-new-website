@@ -1,4 +1,4 @@
-import trainingDevelopmentImage from "../assets/services/training-development.png";
+import trainingDevelopmentImage from "../assets/services/training-development.jpg";
 
 function TrainingDevelopment() {
   return (
