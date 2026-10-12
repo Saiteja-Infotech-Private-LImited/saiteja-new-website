@@ -1,0 +1,26 @@
+# Frontend build context (repository root)
+node_modules
+dist
+dist-ssr
+.git
+.github
+.idea
+.vscode
+*.log
+logs
+*.local
+.env
+.env.*
+!.env.example
+
+# Backend and docs are not needed for the frontend image
+backend
+docs
+database
+README.md
+README.Docker.md
+compose.yaml
+
+# OS / editor
+.DS_Store
+Thumbs.db

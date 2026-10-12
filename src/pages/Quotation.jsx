@@ -600,7 +600,7 @@ function Quotation() {
 
     try {
       const response = await fetch(
-        "http://localhost:8080/api/quotations",
+        "/api/quotations",
         {
           method: "POST",
 
