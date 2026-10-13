@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 import Button from '../components/Button'
 import SectionHeading from '../components/SectionHeading'
-import cultureImage from '../assets/services/training-development.png'
+import cultureImage from '../assets/services/training-development.jpg'
 
 const opportunities = [
   {
