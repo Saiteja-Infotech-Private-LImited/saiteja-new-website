@@ -33,6 +33,12 @@ jobs:
     defaults:
       run:
         working-directory: backend/website-backend
+
+    env:
+      SPRING_DATASOURCE_URL: jdbc:mysql://127.0.0.1:3306/saiteja_website
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: ${{ secrets.MYSQL_ROOT_PASSWORD }}    
+      
     services:
       mysql:
         image: mysql:8
