@@ -12,6 +12,7 @@ import Contact from "./pages/Contact";
 import Quotation from "./pages/Quotation";
 import PrivacyPolicy from "./pages/PrivacyPolicy";
 import Terms from "./pages/Terms";
+import AdminJobs from "./pages/AdminJobs";
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
           <Route path="/quotation" element={<Quotation />} />
           <Route path="/privacy-policy" element={<PrivacyPolicy />} />
           <Route path="/terms" element={<Terms />} />
+          
+          <Route path="/admin/jobs" element={<AdminJobs />} />
         </Route>
       </Routes>
     </BrowserRouter>
