@@ -6,7 +6,7 @@ import {
   Mail,
   Phone,
   Layers,
-  DollarSign,
+  IndianRupee,
   Clock3,
   MessageSquare,
   Send,
@@ -1170,12 +1170,8 @@ function Quotation() {
                 Select project type
               </option>
 
-              <option value="web-development">
-                Web Development
-              </option>
-
-              <option value="software-development">
-                Software Development
+              <option value="hr-staffing">
+                HR & Staffing
               </option>
 
               <option value="it-solutions">
@@ -1186,8 +1182,16 @@ function Quotation() {
                 AI & Data Solutions
               </option>
 
-              <option value="digital-services">
-                Digital Services
+              <option value="branding-digital">
+                Branding & Digital
+              </option>
+
+              <option value="training-development">
+                Training & Development
+              </option>
+
+              <option value="recruitment">
+                Recruitment
               </option>
 
               <option value="other">
@@ -1210,9 +1214,7 @@ function Quotation() {
             <div className="form-field">
 
               <label htmlFor="budget">
-
-                <DollarSign size={15} />
-
+                <IndianRupee size={15} />
                 Budget Range
 
                 <span className="required">
@@ -1235,27 +1237,11 @@ function Quotation() {
                 >
                   Select budget range
                 </option>
-
-                <option value="under-1k">
-                  Under ₹1,000
-                </option>
-
-                <option value="1k-5k">
-                  ₹1,000 – ₹5,000
-                </option>
-
-                <option value="5k-10k">
-                  ₹5,000 – ₹10,000
-                </option>
-
-                <option value="10k-25k">
-                  ₹10,000 – ₹25,000
-                </option>
-
-                <option value="25k-plus">
-                  ₹25,000+
-                </option>
-
+                <option value="under-1k">Under ₹1,000</option>
+                <option value="1k-5k">₹1,000 – ₹5,000</option>
+                <option value="5k-10k">₹5,000 – ₹10,000</option>
+                <option value="10k-25k">₹10,000 – ₹25,000</option>
+                <option value="25k-plus">₹25,000+</option>
               </select>
 
             </div>

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 import Button from "../components/Button";
 import SectionHeading from "../components/SectionHeading";
-import companyLogo from "../assets/logo.png";
+import profileImage from "../assets/services/hr-staffing.jpg";
 
 const milestones = [
   {
@@ -53,27 +53,30 @@ function About() {
             create new opportunities.
           </p>
         </div>
+      </section>
 
-        <div className="about-hero-orbit" aria-hidden="true">
-          <div className="about-orbit about-orbit-one" />
-          <div className="about-orbit about-orbit-two" />
-
-          <div className="about-orbit-core">
-            <img
-              src={companyLogo}
-              alt=""
-              className="about-company-logo"
-            />
+      {/* QUICK FACTS — overlaps hero, mirrors the homepage's featured row */}
+      <section className="about-facts-section">
+        <div className="about-facts-row">
+          <div className="about-fact">
+            <Target size={22} />
+            <h3>Our Mission</h3>
+            <p>Practical technology, talent and business solutions that
+              create measurable value.</p>
           </div>
 
-          <div className="about-floating-card">
-            <Award size={18} />
+          <div className="about-fact">
+            <Eye size={22} />
+            <h3>Our Vision</h3>
+            <p>A trusted partner for organizations growing through
+              technology, people and innovation.</p>
+          </div>
 
-            <span>
-              Technology
-              <br />
-              with purpose
-            </span>
+          <div className="about-fact">
+            <Award size={22} />
+            <h3>Our Approach</h3>
+            <p>Practical, scalable solutions built around real challenges,
+              not just what's trending.</p>
           </div>
         </div>
       </section>
@@ -102,49 +105,10 @@ function About() {
             </p>
           </div>
         </div>
-      </section>
 
-      {/* MISSION / VISION */}
-      <section className="mission-vision-section">
-        <SectionHeading
-          label="WHAT DRIVES US"
-          title="Purpose behind"
-          highlight=" every solution."
-          description="Our mission and vision guide how we build relationships, develop capabilities and approach every challenge."
-        />
-
-        <div className="mission-vision-grid">
-          <article className="purpose-card purpose-card-dark">
-            <div className="purpose-icon">
-              <Target size={25} />
-            </div>
-
-            <span className="purpose-number">01</span>
-
-            <h3>Our Mission</h3>
-
-            <p>
-              To deliver practical technology, talent and business solutions
-              that create measurable value for organizations and meaningful
-              opportunities for people.
-            </p>
-          </article>
-
-          <article className="purpose-card">
-            <div className="purpose-icon">
-              <Eye size={25} />
-            </div>
-
-            <span className="purpose-number">02</span>
-
-            <h3>Our Vision</h3>
-
-            <p>
-              To become a trusted partner for organizations seeking to grow
-              through technology, people and continuous innovation.
-            </p>
-          </article>
-        </div>
+        <figure className="section-photo">
+          <img src={profileImage} alt="People and technology at Saiteja Infotech" loading="lazy" />
+        </figure>
       </section>
 
       {/* LEADERSHIP */}
