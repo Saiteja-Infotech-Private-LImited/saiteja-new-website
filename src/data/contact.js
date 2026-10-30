@@ -6,11 +6,12 @@ export const CONTACT_DETAILS = {
 
   whatsapp: "https://wa.me/919686617096",
 
-  address:
-    "#20-3-124/A1, 2ND FLOOR, LEELA MAHAL CIR, OPP KAFE TIRUMALA, AKKARAMPALLE RD, TIRUPATI, ANDHRA PRADESH 517501, India",
+  address: [
+    "Hyderabad, Telangana, India",
+    "Bangalore, Karnataka, India",
+    "Tirupati, Andhra Pradesh, India"
+  ],
 
-  mapUrl:
-    "https://www.google.com/maps/search/?api=1&query=%2320-3-124%2FA1%2C%202ND%20FLOOR%2C%20LEELA%20MAHAL%20CIR%2C%20OPP%20KAFE%20TIRUMALA%2C%20AKKARAMPALLE%20RD%2C%20TIRUPATI%2C%20ANDHRA%20PRADESH%20517501",
 
   mapEmbedUrl:
     "https://www.google.com/maps?q=%2320-3-124%2FA1%2C%202ND%20FLOOR%2C%20LEELA%20MAHAL%20CIR%2C%20OPP%20KAFE%20TIRUMALA%2C%20AKKARAMPALLE%20RD%2C%20TIRUPATI%2C%20ANDHRA%20PRADESH%20517501&output=embed",
