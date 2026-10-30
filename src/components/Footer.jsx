@@ -114,9 +114,7 @@ function Footer() {
                     rel="noopener noreferrer"
                   >
                     {Icon && <Icon size={14} />}
-
                     {link.label}
-
                     <ArrowUpRight size={14} />
                   </a>
                 );
@@ -143,19 +141,23 @@ function Footer() {
             WhatsApp
           </a>
 
-          <a
-            href={CONTACT_DETAILS.mapUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="footer-address"
-          >
+          {/* ADDRESSES */}
+          <div className="footer-address">
             <MapPin size={16} />
 
-            <span>{CONTACT_DETAILS.address}</span>
-          </a>
+            <div className="footer-address-list">
+              {CONTACT_DETAILS.address.map((location) => (
+                <p key={location}>
+                  {location}
+                </p>
+              ))}
+            </div>
+          </div>
         </div>
+
       </div>
 
+      {/* FOOTER BOTTOM */}
       <div className="footer-bottom">
         <span>
           © 2025 SAITEJA INFOTECH PRIVATE LIMITED. All
