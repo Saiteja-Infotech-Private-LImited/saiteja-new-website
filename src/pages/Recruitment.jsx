@@ -1,4 +1,4 @@
-import recruitmentImage from "../assets/services/recruitment.png";
+import recruitmentImage from "../assets/services/recruitment.jpg";
 
 function Recruitment() {
   return (

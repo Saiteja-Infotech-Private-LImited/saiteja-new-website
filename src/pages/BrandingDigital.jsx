@@ -1,4 +1,4 @@
-import brandingDigitalImage from "../assets/services/branding-digital.png";
+import brandingDigitalImage from "../assets/services/branding-digital.jpg";
 
 function BrandingDigital() {
   return (
