@@ -1,51 +1,50 @@
-import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+
+import { CheckCircle2 } from "lucide-react";
 
 import Button from "../components/Button";
-import softwareImage from "../assets/services/it-solutions.jpg";
+import mobileImage from "../assets/services/hr-staffing.png";
 
 const offerings = [
   {
-    title: "Custom Software Development",
+    title: "Android Application Development",
     description:
-      "Customized software applications designed around your business requirements, workflows and operational challenges.",
+      "We build intuitive Android applications designed to meet business requirements and provide smooth experiences for users.",
   },
   {
-    title: "Website Development",
+    title: "iOS Application Development",
     description:
-      "Responsive, user-friendly websites that strengthen your online presence and provide consistent experiences across devices.",
+      "We develop user-friendly iOS applications that help businesses connect with customers through Apple mobile devices.",
   },
   {
-    title: "Mobile Application Development",
+    title: "Custom Mobile Applications",
     description:
-      "Intuitive mobile applications that help businesses connect with customers and simplify everyday activities.",
+      "We create customized mobile applications tailored to specific business needs, workflows and customer requirements.",
   },
   {
-    title: "Web Application Development",
+    title: "Mobile App Integration",
     description:
-      "Secure and scalable web applications tailored to business processes and operational requirements.",
+      "We integrate mobile applications with business systems and services to simplify operations and improve connectivity.",
   },
 ];
 
 const benefits = [
-  "Solutions aligned with business requirements",
-  "Responsive and user-friendly experiences",
-  "Scalable application architecture",
-  "Support for evolving business needs",
+  "Better customer engagement",
+  "Convenient access to business services",
+  "Scalable and intuitive applications",
+  "Simplified everyday business operations",
 ];
 
-export default function SoftwareDevelopment() {
+export default function MobileApplicationDevelopment() {
   return (
     <main className="service-detail-page">
 
       <section className="service-detail-hero">
 
-
-        <h1>Software Development</h1>
+        <h1>Mobile Application Development</h1>
 
         <p>
-          Building reliable digital solutions around
-          your business goals.
+          Building intuitive and scalable mobile applications
+          that connect businesses with their customers.
         </p>
 
         <Button to="/contact">Enquire Now</Button>
@@ -55,23 +54,23 @@ export default function SoftwareDevelopment() {
       <section className="service-detail-intro">
 
         <img
-          src={softwareImage}
-          alt="Software development"
+          src={mobileImage}
+          alt="Mobile Application Development"
         />
 
         <div>
 
           <div className="section-label">OVERVIEW</div>
 
-          <h2>Software built for your needs</h2>
+          <h2>Mobile experiences built for your business</h2>
 
           <p>
-            We develop customized software applications
-            designed to address business challenges,
-            improve operational efficiency and support
-            business growth. Our focus is on practical,
-            user-friendly solutions that can adapt as
-            your organization evolves.
+            We build scalable and intuitive mobile applications
+            that help businesses connect with customers and
+            simplify everyday operations. Our focus is on
+            developing user-friendly mobile solutions that
+            support business requirements and improve
+            customer experiences.
           </p>
 
         </div>
@@ -84,7 +83,7 @@ export default function SoftwareDevelopment() {
 
           <div className="section-label">WHAT WE OFFER</div>
 
-          <h2>Our Software Development Services</h2>
+          <h2>Our Mobile Application Development Services</h2>
 
           <div className="service-detail-sections-grid">
 
@@ -115,7 +114,7 @@ export default function SoftwareDevelopment() {
             WHY CHOOSE US
           </div>
 
-          <h2>What our approach focuses on</h2>
+          <h2>Benefits of Mobile Application Development</h2>
 
           <div className="service-benefits-grid">
 
@@ -137,11 +136,11 @@ export default function SoftwareDevelopment() {
 
       <section className="service-detail-cta">
 
-        <h2>Have a software project in mind?</h2>
+        <h2>Have a mobile app idea?</h2>
 
         <p>
-          Tell us about your requirements and let's
-          discuss a suitable solution.
+          Share your application requirements with our team
+          and let's discuss the right solution.
         </p>
 
         <Button to="/contact">Contact Us</Button>

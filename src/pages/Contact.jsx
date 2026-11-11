@@ -1,5 +1,5 @@
-
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import {
   Mail,
   MapPin,
@@ -11,9 +11,15 @@ import Button from "../components/Button";
 import { CONTACT_DETAILS } from "../data/contact";
 
 function Contact() {
+  const navigate = useNavigate();
+
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [successMessage, setSuccessMessage] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
+
+  const [clientName, setClientName] = useState("");
+  const [clientDesignation, setClientDesignation] = useState("");
+  const [clientReview, setClientReview] = useState("");
 
   const handleNameInput = (event) => {
     // Allow English letters and spaces only
@@ -99,6 +105,31 @@ function Contact() {
     }
   };
 
+  
+  const handleSubmitReview = (e) => {
+    e.preventDefault();
+    if (!clientName || !clientReview) {
+      alert("Please enter both Name and Review!");
+      return;
+    }
+
+    const newReview = {
+      name: clientName,
+      designation: clientDesignation || "Client Partner",
+      review: clientReview
+    };
+
+    const savedReviews = localStorage.getItem('saitejaProductionReviews');
+    const existingReviews = savedReviews ? JSON.parse(savedReviews) : [];
+    
+    localStorage.setItem(
+      'saitejaProductionReviews', 
+      JSON.stringify([newReview, ...existingReviews])
+    );
+
+    alert("Thank you! Your review has been submitted successfully.");
+    navigate("/");
+  };
   return (
     <main className="contact-page">
 
@@ -317,12 +348,79 @@ function Contact() {
 
       </section>
 
+      {/* NEW SUBMIT REVIEW SECTION */}
+      <section className="review-form-section" style={{ padding: '60px 20px', backgroundColor: '#f9fafb', borderTop: '1px solid #e5e7eb', textAlign: 'center' }}>
+        <div style={{ maxWidth: '650px', margin: '0 auto', textAlign: 'left', backgroundColor: '#ffffff', padding: '40px', borderRadius: '12px', boxShadow: '0 4px 20px rgba(0,0,0,0.05)', border: '1px solid #e5e7eb' }}>
+          <div style={{ color: '#ff7a00', fontSize: '0.85rem', fontWeight: 'bold', letterSpacing: '1px', textTransform: 'uppercase', marginBottom: '8px', textAlign: 'center' }}>
+            Share Your Experience
+          </div>
+          <h2 style={{ fontSize: '1.75rem', fontWeight: 'bold', color: '#111827', margin: '0 0 25px 0', textAlign: 'center' }}>
+            Share Your Experience with Us
+          </h2>
+          
+          <form onSubmit={handleSubmitReview} style={{ display: 'flex', flexDirection: 'column', gap: '20px' }}>
+            <label style={{ display: 'flex', flexDirection: 'column', gap: '6px', fontWeight: '600', color: '#374151', fontSize: '0.95rem' }}>
+              Your Name *
+              <input 
+                type="text" 
+                value={clientName} 
+                onChange={(e) => setClientName(e.target.value)} 
+                placeholder="E.g., John Doe" 
+                required 
+                style={{ padding: '12px', borderRadius: '6px', border: '1px solid #d1d5db', fontSize: '1rem', fontWeight: 'normal', width: '100%', outline: 'none' }}
+              />
+            </label>
+
+            <label style={{ display: 'flex', flexDirection: 'column', gap: '6px', fontWeight: '600', color: '#374151', fontSize: '0.95rem' }}>
+              Designation / Company
+              <input 
+                type="text" 
+                value={clientDesignation} 
+                onChange={(e) => setClientDesignation(e.target.value)} 
+                placeholder="E.g., CEO at Nexus Retail" 
+                style={{ padding: '12px', borderRadius: '6px', border: '1px solid #d1d5db', fontSize: '1rem', fontWeight: 'normal', width: '100%', outline: 'none' }}
+              />
+            </label>
+
+            <label style={{ display: 'flex', flexDirection: 'column', gap: '6px', fontWeight: '600', color: '#374151', fontSize: '0.95rem' }}>
+              Review Message *
+              <textarea 
+                value={clientReview} 
+                onChange={(e) => setClientReview(e.target.value)} 
+                rows="4" 
+                placeholder="Write your experience with Saiteja Infotech..." 
+                required 
+                style={{ padding: '12px', borderRadius: '6px', border: '1px solid #d1d5db', fontSize: '1rem', fontWeight: 'normal', width: '100%', outline: 'none', resize: 'vertical' }}
+              />
+            </label>
+
+            <button 
+              type="submit" 
+              style={{
+                backgroundColor: '#ff7a00',
+                color: '#ffffff',
+                padding: '14px',
+                fontSize: '16px',
+                fontWeight: 'bold',
+                borderRadius: '6px',
+                border: 'none',
+                cursor: 'pointer',
+                boxShadow: '0 4px 12px rgba(255, 122, 0, 0.2)',
+                transition: 'background-color 0.2s ease',
+                marginTop: '10px'
+              }}
+              onMouseOver={(e) => e.currentTarget.style.backgroundColor = '#e66d00'}
+              onMouseOut={(e) => e.currentTarget.style.backgroundColor = '#ff7a00'}
+            >
+              Submit
+            </button>
+          </form>
+        </div>
+      </section>
 
       {/* MAP */}
       <section className="map-section">
-
         <div className="contact-map">
-
           <iframe
             title="Saiteja Infotech Office Location"
             src={CONTACT_DETAILS.mapEmbedUrl}
@@ -330,9 +428,7 @@ function Contact() {
             allowFullScreen
             referrerPolicy="no-referrer-when-downgrade"
           />
-
         </div>
-
       </section>
 
     </main>

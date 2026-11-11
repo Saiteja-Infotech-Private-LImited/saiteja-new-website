@@ -4,56 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "../components/Button";
 import SectionHeading from "../components/SectionHeading";
 
-import softwareImage from "../assets/services/it-solutions.jpg";
-import itImage from "../assets/services/ai-data-solutions.jpg";
-import cloudImage from "../assets/services/hr-staffing.png";
-
-const services = [
-  {
-    image: softwareImage,
-    number: "01",
-    title: "Software Development",
-    description:
-      "We develop customized software solutions and applications designed to address business challenges, improve operational efficiency, and support business growth.",
-    items: [
-      "Custom software development",
-      "Website development",
-      "Mobile application development",
-      "Web application development",
-    ],
-    link: "/services/software-development",
-  },
-
-  {
-    image: itImage,
-    number: "02",
-    title: "IT Solutions",
-    description:
-      "Technology solutions designed to help businesses improve processes, productivity and digital capabilities.",
-    items: [
-      "IT consulting",
-      "Digital transformation",
-      "Technology integration",
-      "Business process automation",
-    ],
-    link: "/services/it-solutions",
-  },
-
-  {
-    image: cloudImage,
-    number: "03",
-    title: "Cloud, DevOps & HRMS Solutions",
-    description:
-      "Modern cloud, DevOps and workforce management solutions that help businesses simplify operations and support growth.",
-    items: [
-      "HRMS solutions",
-      "Employee and workforce management",
-      "Cloud infrastructure solutions",
-      "DevOps and deployment automation",
-    ],
-    link: "/services/cloud-devops-hrms",
-  },
-];
+import services from "../data/services";
 
 function Services() {
   return (
@@ -70,10 +21,9 @@ function Services() {
         </h1>
 
         <p>
-          From software development to IT solutions and
-          workforce management, we bring complementary
-          capabilities together to help organizations move
-          forward.
+          From custom software development to website
+          and mobile application development, we provide
+          digital solutions to help businesses grow.
         </p>
       </section>
 
@@ -92,7 +42,7 @@ function Services() {
         <div className="services-detail-grid">
 
           {services.map(
-            ({ image, number, title, description, items, link }) => (
+            ({ image, number, title, description, highlights, link }) => (
               <article
                 className="service-detail-card"
                 key={title}
@@ -115,7 +65,7 @@ function Services() {
                   <p>{description}</p>
 
                   <ul className="service-feature-list">
-                    {items.map((item) => (
+                    {highlights.map((item) => (
                       <li key={item}>
                         <CheckCircle2 size={17} />
                         <span>{item}</span>
@@ -133,6 +83,7 @@ function Services() {
               </article>
             )
           )}
+
         </div>
       </section>
 

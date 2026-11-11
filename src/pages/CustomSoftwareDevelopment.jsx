@@ -1,75 +1,80 @@
+
 import { CheckCircle2 } from "lucide-react";
 
 import Button from "../components/Button";
-import itImage from "../assets/services/ai-data-solutions.jpg";
+import softwareImage from "../assets/services/it-solutions.jpg";
 
 const offerings = [
   {
-    title: "IT Consulting",
+    title: "Customized Software Solutions",
     description:
-      "Technology guidance to help organizations assess their requirements, identify suitable solutions and make informed decisions.",
-  },
-  {
-    title: "Digital Transformation",
-    description:
-      "Practical digital solutions that help modernize operations, streamline workflows and support changing business needs.",
-  },
-  {
-    title: "Technology Integration",
-    description:
-      "Connecting business systems and tools to support smoother information flow and more consistent operations.",
+      "Software applications developed according to your specific business requirements, goals and workflows.",
   },
   {
     title: "Business Process Automation",
     description:
-      "Identifying repetitive activities that may be streamlined through suitable automation and digital workflows.",
+      "Automate repetitive tasks and business processes to improve productivity and reduce manual effort.",
+  },
+  {
+    title: "Scalable Software Applications",
+    description:
+      "Flexible software solutions designed to support your business as it grows and evolves.",
+  },
+  {
+    title: "Software Integration",
+    description:
+      "Connect your software applications and business systems to improve data flow and operational efficiency.",
   },
 ];
 
 const benefits = [
-  "More informed technology decisions",
-  "Streamlined business processes",
+  "Solutions tailored to business requirements",
   "Improved operational efficiency",
-  "Technology aligned with business goals",
+  "Reduced manual work through automation",
+  "Scalable and flexible software solutions",
 ];
 
-export default function ITSolutions() {
+export default function CustomSoftwareDevelopment() {
   return (
     <main className="service-detail-page">
 
       <section className="service-detail-hero">
 
-        <h1>IT Solutions</h1>
+        <h1>Custom Software Development</h1>
 
         <p>
-          Practical technology solutions that help
-          businesses work smarter.
+          Building customized software solutions to
+          solve business challenges and support growth.
         </p>
 
         <Button to="/contact">Enquire Now</Button>
+
       </section>
 
       <section className="service-detail-intro">
 
         <img
-          src={itImage}
-          alt="IT and digital solutions"
+          src={softwareImage}
+          alt="Custom Software Development"
         />
 
         <div>
+
           <div className="section-label">OVERVIEW</div>
 
-          <h2>Technology that supports progress</h2>
+          <h2>Software designed around your business</h2>
 
           <p>
-            We provide technology consulting and digital
-            solutions that help organizations modernize
-            operations, improve productivity and strengthen
-            their digital capabilities. We focus on understanding
-            business needs and identifying practical technology
-            approaches.
+            We develop customized software applications
+            designed to address business challenges,
+            improve operational efficiency, and support
+            business growth. Our solutions are designed
+            around your business requirements and
+            operational needs.
           </p>
+
         </div>
+
       </section>
 
       <section className="service-detail-information">
@@ -78,7 +83,7 @@ export default function ITSolutions() {
 
           <div className="section-label">WHAT WE OFFER</div>
 
-          <h2>Our IT Solutions Services</h2>
+          <h2>Our Custom Software Development Services</h2>
 
           <div className="service-detail-sections-grid">
 
@@ -96,7 +101,9 @@ export default function ITSolutions() {
             ))}
 
           </div>
+
         </div>
+
       </section>
 
       <section className="service-detail-benefits">
@@ -107,7 +114,7 @@ export default function ITSolutions() {
             WHY CHOOSE US
           </div>
 
-          <h2>How our solutions help</h2>
+          <h2>Benefits of Custom Software Development</h2>
 
           <div className="service-benefits-grid">
 
@@ -122,15 +129,18 @@ export default function ITSolutions() {
             ))}
 
           </div>
+
         </div>
+
       </section>
 
       <section className="service-detail-cta">
 
-        <h2>Looking for an IT solution?</h2>
+        <h2>Have a software project in mind?</h2>
 
         <p>
-          Share your business requirements with our team.
+          Tell us about your business requirements
+          and let's discuss the right software solution.
         </p>
 
         <Button to="/contact">Contact Us</Button>
