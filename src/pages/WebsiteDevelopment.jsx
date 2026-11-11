@@ -1,81 +1,75 @@
-import { Link } from "react-router-dom";
-import { ArrowLeft, CheckCircle2 } from "lucide-react";
+import { CheckCircle2 } from "lucide-react";
 
 import Button from "../components/Button";
-import cloudImage from "../assets/services/hr-staffing.png";
+import websiteImage from "../assets/services/ai-data-solutions.jpg";
 
 const offerings = [
   {
-    title: "HRMS Solutions",
+    title: "Responsive Website Design",
     description:
-      "Workforce management solutions that can support employee information, attendance tracking and day-to-day HR administration.",
+      "We design responsive websites that adapt to different screen sizes and provide consistent experiences across desktops, tablets and mobile devices.",
   },
   {
-    title: "Employee & Workforce Management",
+    title: "User-Friendly Interfaces",
     description:
-      "Structured support for employee-related processes and workforce coordination across business operations.",
+      "We create intuitive website interfaces that make navigation simple and help visitors find the information they need.",
   },
   {
-    title: "Cloud Infrastructure Solutions",
+    title: "Business Website Development",
     description:
-      "Cloud infrastructure support to help businesses run accessible, adaptable and scalable application environments.",
+      "We develop professional websites that showcase your business, services and offerings while strengthening your online presence.",
   },
   {
-    title: "DevOps & Deployment Automation",
+    title: "Website Optimization",
     description:
-      "Development and deployment workflow support intended to improve consistency and streamline application releases.",
+      "We focus on website performance, usability and accessibility to provide smooth and reliable browsing experiences.",
   },
 ];
 
 const benefits = [
-  "More organized workforce processes",
-  "Simplified HR administration",
-  "Scalable cloud environments",
-  "Streamlined deployment workflows",
+  "Stronger online business presence",
+  "Responsive experiences across devices",
+  "Easy navigation and user-friendly design",
+  "Improved website performance and usability",
 ];
 
-export default function CloudDevOpsHRMS() {
+export default function WebsiteDevelopment() {
   return (
     <main className="service-detail-page">
 
       <section className="service-detail-hero">
 
-
-        <h1>Cloud, DevOps & HRMS Solutions</h1>
+        <h1>Website Development</h1>
 
         <p>
-          Modern technology and workforce solutions
-          for evolving businesses.
+          Creating responsive and user-friendly websites
+          that strengthen your digital presence.
         </p>
 
         <Button to="/contact">Enquire Now</Button>
-
       </section>
 
       <section className="service-detail-intro">
 
         <img
-          src={cloudImage}
-          alt="Workforce and business solutions"
+          src={websiteImage}
+          alt="Website Development"
         />
 
         <div>
-
           <div className="section-label">OVERVIEW</div>
 
-          <h2>Supporting your people and technology</h2>
+          <h2>Websites designed for your business</h2>
 
           <p>
-            We provide cloud, DevOps and HR management
-            solutions that help businesses simplify
-            operations, manage resources and support growth.
-            Our services bring together workforce processes
-            and technology infrastructure to address
-            practical business needs.
+            We design and develop responsive, user-friendly
+            websites that strengthen your online presence
+            and provide seamless experiences across devices.
+            Our focus is on creating professional websites
+            that help businesses connect with their audiences
+            and communicate their services effectively.
           </p>
-
         </div>
-
       </section>
 
       <section className="service-detail-information">
@@ -84,7 +78,7 @@ export default function CloudDevOpsHRMS() {
 
           <div className="section-label">WHAT WE OFFER</div>
 
-          <h2>Our Cloud, DevOps & HRMS Services</h2>
+          <h2>Our Website Development Services</h2>
 
           <div className="service-detail-sections-grid">
 
@@ -102,9 +96,7 @@ export default function CloudDevOpsHRMS() {
             ))}
 
           </div>
-
         </div>
-
       </section>
 
       <section className="service-detail-benefits">
@@ -115,7 +107,7 @@ export default function CloudDevOpsHRMS() {
             WHY CHOOSE US
           </div>
 
-          <h2>Business-focused outcomes</h2>
+          <h2>Benefits of Website Development</h2>
 
           <div className="service-benefits-grid">
 
@@ -130,17 +122,16 @@ export default function CloudDevOpsHRMS() {
             ))}
 
           </div>
-
         </div>
-
       </section>
 
       <section className="service-detail-cta">
 
-        <h2>Need support with cloud, DevOps or HRMS?</h2>
+        <h2>Ready to build your website?</h2>
 
         <p>
-          Contact us to discuss your organization's requirements.
+          Share your website requirements with our team
+          and let's create your digital presence.
         </p>
 
         <Button to="/contact">Contact Us</Button>

@@ -4572,3 +4572,172 @@ h4 {
     height: 220px;
   }
 }
+
+
+/* WHY CHOOSE US SECTION */
+
+.why-choose-us-section {
+  padding: 80px 20px !important;
+  background: #f9fafb !important;
+  border-top: 1px solid #e5e7eb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.why-choose-us-container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.why-choose-us-heading {
+  margin-bottom: 50px;
+}
+
+.why-choose-us-heading .section-label {
+  color: #ff7900;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+}
+
+.why-choose-us-heading h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.why-choose-us-heading p {
+  color: #6b7280;
+  font-size: 1.05rem;
+}
+
+.why-choose-us-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 30px;
+}
+
+.why-choose-us-grid .why-card {
+  background: #fff;
+  padding: 30px;
+  border: 1px solid #eaeaea;
+  border-radius: 14px;
+  min-height: 220px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+}
+
+.why-card > div {
+  font-size: 1.75rem;
+  margin-bottom: 12px;
+}
+
+.why-card h3 {
+  font-size: 1.25rem;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.why-card p {
+  color: #4b5563;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* TESTIMONIALS SECTION */
+
+.testimonials-section {
+  padding: 80px 20px !important;
+  background: #fff !important;
+}
+
+.testimonials-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 0.85fr 1.5fr;
+  gap: 70px;
+  align-items: start;
+}
+
+.testimonials-intro h2 {
+  font-size: 2.7rem;
+  line-height: 1.25;
+  font-weight: 700;
+  color: #111827;
+  margin: 18px 0 24px;
+}
+
+.testimonials-intro > p {
+  color: #64748b;
+  line-height: 1.7;
+  margin-bottom: 36px;
+}
+
+.testimonials-intro .primary-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 26px;
+}
+
+.testimonial-card {
+  background: #fff;
+  padding: 34px;
+  border: 1px solid #edf0f5;
+  border-bottom: 5px solid #ff7900;
+  border-radius: 18px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+  min-height: 330px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.testimonial-review {
+  color: #26364f;
+  font-size: 1rem;
+  line-height: 1.7;
+}
+
+.testimonial-author {
+  border-top: 1px solid #edf0f5;
+  padding-top: 18px;
+}
+
+.testimonial-author h4 {
+  color: #111827;
+  margin-bottom: 8px;
+}
+
+.testimonial-author span {
+  color: #ff7900;
+  font-weight: 600;
+}
+
+@media (max-width: 900px) {
+  .why-choose-us-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .testimonials-container {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
+
+@media (max-width: 600px) {
+  .why-choose-us-grid,
+  .testimonials-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .testimonials-intro h2 {
+    font-size: 2.2rem;
+  }
+}
