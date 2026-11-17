@@ -36,3 +36,16 @@ jobs:
 
       - name: Invalidate CloudFront Cache
         run: aws cloudfront create-invalidation --distribution-id E2U8UTJJ86BNPO --paths "/*"
+      - name: Notify Discord
+        if: always()
+        env:
+          WEBHOOK_URL: ${{ secrets.DISCORD_WEBHOOK_URL }}
+          JOB_STATUS: ${{ job.status }}
+        run: |
+          if [ "$JOB_STATUS" == "success" ]; then
+            MSG="✅ **Website Deployment Succeeded** for ${{ github.repository }} (${{ github.ref_name }})"
+          else
+            MSG="❌ **Website Deployment Failed** for ${{ github.repository }} (${{ github.ref_name }})\nLogs: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          fi
+
+          curl -H "Content-Type: application/json" -d "{\"content\": \"$MSG\"}" "$WEBHOOK_URL"
